@@ -5,6 +5,8 @@
  */
 package weightcalculator;
 
+import cmdlineparser.CmdLineParser;
+
 /**
  *
  * @author karl
@@ -16,6 +18,11 @@ public class WeightCalculatorMain {
      */
     public static void main(String[] args) {
 
+        System.out.println(args.length);
+        if (args.length > 0) {
+            CmdLineParser clp = new CmdLineParser(args);
+        }
+
 //        StabilizerWeightCalc frontWeightMid = new StabilizerWeightCalc(4.0, 0.75, 't', 0.3, 's');
 //        StabilizerWeightCalc frontWeightCap = new StabilizerWeightCalc(4.0, 0.75, 't', 0.3, 's');
 //        StabilizerWeightCalc backWeightMid = new StabilizerWeightCalc(8.0, 1.0, 't', 0.45, 'm');
@@ -25,7 +32,6 @@ public class WeightCalculatorMain {
 //        frontWeightCap.getLengthEndWt();
 //        backWeightMid.getLengthMidWt();
 //        backWeightCap.getLengthEndWt();
-        
         StabilizerWeightCalc frontWeight = new StabilizerWeightCalc(6.0, 0.7, 'b', 0.375, 'm');
         frontWeight.getLengthEndWt();
 
@@ -34,7 +40,6 @@ public class WeightCalculatorMain {
 //
 //        StabilizerWeightCalc frontWeightThru = new StabilizerWeightCalc(2.81, 0.754, 't', 0, 'n', 2.0, 0.005);
 //        frontWeightThru.getLengthThruHole();
-
     }
 
 }
